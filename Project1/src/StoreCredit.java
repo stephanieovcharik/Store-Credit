@@ -10,7 +10,7 @@ public class StoreCredit {
 		sc.nextLine();
 		while(sc.hasNextLine()){
 			int creditAmount = Integer.parseInt(sc.nextLine()),
-    	        numItems = Integer.parseInt(sc.nextLine());
+    	        	    numItems = Integer.parseInt(sc.nextLine());
 			String prices = sc.nextLine();
 			int numCase = 1;
 			
