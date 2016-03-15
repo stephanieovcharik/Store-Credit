@@ -8,11 +8,12 @@ public class StoreCredit {
 	public static void main(String[] args) throws Exception {
 		sc = new Scanner(new File("input.txt"));
 		sc.nextLine();
+		int numCase=0;
 		while(sc.hasNextLine()){
 			int creditAmount = Integer.parseInt(sc.nextLine()),
     	        	    numItems = Integer.parseInt(sc.nextLine());
 			String prices = sc.nextLine();
-			int numCase = 1;
+			
 			
 			Items[] item = new Items [numItems];
 			
@@ -24,8 +25,8 @@ public class StoreCredit {
 			for(int x = 0; x < numItems-1; x++){
 				for(int y = x+1; y < numItems; y++){
 					if(item[x].price + item[y].price == creditAmount){
-						System.out.printf("Case #%d: %d %d\n",numCase, x+1, y+1);
 						numCase++;
+						System.out.printf("Case #%d: %d %d\n",numCase, x+1, y+1);
 						break;
 					}
 				}
